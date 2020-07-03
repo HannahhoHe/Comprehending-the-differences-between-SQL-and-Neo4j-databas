@@ -23,6 +23,7 @@ AND date BETWEEN '2015-02-01' AND '2015-02-05'
 
 JOIN producer 
 ON producer.id = product.producer_id
-WHERE amount IS NULL```
+WHERE amount IS NULL
+```
 
 
