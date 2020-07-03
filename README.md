@@ -23,34 +23,6 @@ AND date BETWEEN '2015-02-01' AND '2015-02-05'
 
 JOIN producer 
 ON producer.id = product.producer_id
-WHERE amount IS NULL
-
-```
-
-OUTPUT
-  product_name   | price |   company_name   |
------------------+-------+------------------+
- Chicken         |  5.50 | GoodFoods        |
- Kiwi            |   0.3 | GoodFoods        |
- Grapefruit      |   0.5 | GoodFoods        |
- Cucumber        |   0.7 | HealthyFood Inc. |
- Pear            |     1 | HealthyFood Inc. |
- Lemon           |     1 | HealthyFood Inc. |
- Whole Milk      |  3.50 | SupremeFoods     |
- Skim Milk       |  3.30 | SupremeFoods     |
- Tomato          |     1 | SupremeFoods     |
- Organic Yoghurt |  2.30 | Foodie           |
- Greek Yoghurt   |     2 | Foodie           |
- Beef            |  4.30 | Foodie           |
- Cheddar         |     5 | Foodie           |
- American Cheese |     4 | Foodie           |
- Tuna            |     5 | Foodie           |
- Tilapia         |   4.5 | Foodie           |
- Salmon Atlantic |   6.5 | Foodie           |
- Rainbow Trout   |     6 | Foodie           |
- Peach           |     1 | Foodie           |
- Grapes          |     2 | Foodie           |
- Parmesan        |  4.30 | Gusto            |
-
+WHERE amount IS NULL```
 
 
