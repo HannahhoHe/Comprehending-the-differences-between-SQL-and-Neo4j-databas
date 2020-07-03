@@ -29,9 +29,9 @@ WHERE amount IS NULL
 # SQL Coding Example
 ```
 query = """
-MATCH (author: Author {name: "Peter G. Neumann"}) [:AUTHOR]-()-[:AUTHOR] (coauthors)  [:AUTHOR]-()-[:AUTHOR]  (cocoauthors)
+MATCH (author: Author {name: "Peter G. Neumann"})<- [:AUTHOR]-()-[:AUTHOR] ->(coauthors) <- [:AUTHOR]-()-[:AUTHOR] -> (cocoauthors)
 
-WHERE author <> cocoauthors AND not((author)  [:AUTHOR]-()-[:AUTHOR]  (cocoauthors))
+WHERE author <> cocoauthors AND not((author) <- [:AUTHOR]-()-[:AUTHOR] -> (cocoauthors))
 
 RETURN cocoauthors.name AS cocoauthors, count(*) AS collaborations
 ORDER BY collaborations DESC
